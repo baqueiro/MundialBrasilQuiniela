@@ -1,0 +1,10 @@
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\Brasil2014\bin\Brasil2014.dll
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\Brasil2014\bin\Brasil2014.pdb
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\Brasil2014\bin\Nancy.dll
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\Brasil2014\bin\Nancy.Hosting.Aspnet.dll
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\Brasil2014\bin\Nancy.ViewEngines.Razor.dll
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\Brasil2014\bin\System.Web.Razor.Unofficial.dll
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\Brasil2014\bin\System.Web.Razor.Unofficial.pdb
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\Brasil2014\obj\Debug\Brasil2014.csprojResolveAssemblyReference.cache
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\Brasil2014\obj\Debug\Brasil2014.dll
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\Brasil2014\obj\Debug\Brasil2014.pdb

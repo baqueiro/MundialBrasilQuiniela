@@ -1,0 +1,141 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Brasil 2014</title>
+    <link href="../Content/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <h3 class="text-center">Brasil 2014 quiniela Mentor M&eacute;xico</h3>
+
+
+    <div class="container">
+        <div class="center-block">
+            <div class="col-md-9">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div data-bind="foreach: Matches">
+                            <div class="col-md-10">
+                            <div class="btn-group btn-group-justified">
+                                <div class="btn-group" data-bind="click: function () { Select(NumGame, 1); }">
+                                    <button type="button" class="btn btn-default" data-bind="css: Succes1">
+                                        <img src="#" data-bind="attr: { src: Team1_Img }" />
+                                        <span data-bind="text: Team1_Name"></span>
+                                    </button>
+                                </div>
+                                <div class="btn-group" data-bind="click: function () { Select(NumGame, 'e'); }">
+                                    <button type="button" class="btn btn-default" style="height: 60px;" data-bind="css: SuccesE">Empate</button>
+                                </div>
+                                <div class="btn-group" data-bind="click: function () { Select(NumGame, 2); }">
+                                    <button type="button" class="btn btn-default" data-bind="css: Succes2">
+                                        <img src="#" data-bind="attr: { src: Team2_Img }, " />
+                                        <span data-bind="text: Team2_Name"></span>
+                                    </button>
+                                </div>
+                            </div>
+                                </div>
+                            <div style="height: 60px;" data-bind="text: Result"></div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <input type="button" value="seleccionar tabla" class="btn btn-default" onclick="selectElementContents(document.getElementById('table'));" />
+                        <table class="table table-striped table-bordered table-condensed" id="table">
+                            <thead>
+                                <tr>
+                                    <th>Num</th>
+                                    <th>Partido</th>
+                                    <th>Resultado</th>
+                                </tr>
+                            </thead>
+                            <tbody data-bind="foreach: Matches">
+                                <tr>
+                                    <td data-bind="text: NumGame"></td>
+                                    <td data-bind="text: Team1_Name + ' vs ' + Team2_Name"></td>
+                                    <td data-bind="text: Result" class="text-center"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../Content/js/jquery-2.1.0.min.js"></script>
+    <script src="../Content/js/bootstrap.min.js"></script>
+    <script src="../Content/js/knockout-3.1.0.js"></script>
+    <script>
+
+        function selectElementContents(el) {
+            var body = document.body, range, sel;
+            if (document.createRange && window.getSelection) {
+                range = document.createRange();
+                sel = window.getSelection();
+                sel.removeAllRanges();
+                try {
+                    range.selectNodeContents(el);
+                    sel.addRange(range);
+                } catch (e) {
+                    range.selectNode(el);
+                    sel.addRange(range);
+                }
+            } else if (body.createTextRange) {
+                range = body.createTextRange();
+                range.moveToElementText(el);
+                range.select();
+            }
+        }
+
+        function MatchModel(data) {
+            var self = this;
+            self.NumGame = data.NumGame;
+            self.Id1 = data.Team1.Id;
+            self.Id2 = data.Team2.Id;
+            self.Team1_Name = data.Team1.Name;
+            self.Team1_Img = data.Team1.UriImg;
+            self.Team2_Name = data.Team2.Name;
+            self.Team2_Img = data.Team2.UriImg;
+            self.Result = ko.observable(data.Result);
+            self.Succes1 = ko.observable();
+            self.SuccesE = ko.observable();
+            self.Succes2 = ko.observable();
+            self.Select = function (numGame, sel) {
+                self.Result(sel);
+                self.Succes1('');
+                self.SuccesE('');
+                self.Succes2('');
+                switch (sel) {
+                    case 1:
+                        self.Succes1('alert-success');
+                        break;
+                    case 'e':
+                        self.SuccesE('alert-success');
+                        break;
+                    case 2:
+                        self.Succes2('alert-success');
+                        break;
+                }
+            };
+        };
+
+        function MatchViewModel() {
+            var self = this;
+            self.Matches = ko.observableArray();
+            $.getJSON("/api/Matches/", function (response) {
+                var mapped = $.map(response, function (repo) {
+                    return new MatchModel(repo);
+                });
+                self.Matches(mapped);
+            });
+        };
+
+        ko.applyBindings(new MatchViewModel());
+    </script>
+</body>
+
+</html>
