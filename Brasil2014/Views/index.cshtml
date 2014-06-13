@@ -63,6 +63,7 @@
     <script src="../Content/js/jquery-2.1.0.min.js"></script>
     <script src="../Content/js/bootstrap.min.js"></script>
     <script src="../Content/js/knockout-3.1.0.js"></script>
+    <script src="../Content/js/knockout.localStorage.js"></script>
     <script>
 
         function selectElementContents(el) {
@@ -94,8 +95,8 @@
             self.Team1_Img = data.team1.uriImg;
             self.Team2_Name = data.team2.name;
             self.Team2_Img = data.team2.uriImg;
-            self.Result = ko.observable(data.result);
-            self.Succes1 = ko.observable();
+            self.Result = ko.observable(data.result); // , {persist: 'self.Result'}
+            self.Succes1 = ko.observable('');
             self.SuccesE = ko.observable();
             self.Succes2 = ko.observable();
             self.Select = function (numGame, sel) {

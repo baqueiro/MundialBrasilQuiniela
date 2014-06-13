@@ -62,6 +62,7 @@
     <Content Include="Content\nancy-logo.png" />
     <Content Include="Web.config" />
     <Content Include="app.config" />
+    <Content Include="Content\js\knockout.localStorage.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
