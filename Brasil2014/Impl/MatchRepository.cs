@@ -117,6 +117,20 @@ namespace Brasil2014.Impl
                 Team2 = teamModel[29]
             });
 
+			matches.Add(new MatchModel()
+				{
+					NumGame = 16,
+					Team1 = teamModel[0],
+					Team2 = teamModel[2]
+				});
+
+			matches.Add(new MatchModel()
+				{
+					NumGame = 17,
+					Team1 = teamModel[30],
+					Team2 = teamModel[31]
+				});
+
             // TODO: continuar
 
             return matches;

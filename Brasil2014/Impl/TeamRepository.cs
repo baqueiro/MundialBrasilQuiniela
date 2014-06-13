@@ -224,7 +224,17 @@ namespace Brasil2014.Impl
                 UriImg = "http://img.fifa.com/images/flags/4/alg.png"
             });
 
-            // TODO: continuar
+			teams.Add (new TeamModel () {
+				Id = 31,
+				Name = "Rusia",
+				UriImg = "http://img.fifa.com/images/flags/4/rus.png"
+			});
+
+			teams.Add (new TeamModel () {
+				Id = 32,
+				Name = "República de Corea",
+				UriImg = "http://img.fifa.com/images/flags/4/kor.png"
+			});
 
             return teams;
         }
