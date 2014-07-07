@@ -13,6 +13,8 @@ namespace Brasil2014.Model
 
         public TeamModel Team2 { get; set; }
 
+        public String Prophecy { get; set; }
+
         public String Result { get; set; }
     }
 }

@@ -8,3 +8,16 @@
 \\psf\Home\Documents\Projects\MundialBrasilQuiniela\Brasil2014\obj\Debug\Brasil2014.csprojResolveAssemblyReference.cache
 \\psf\Home\Documents\Projects\MundialBrasilQuiniela\Brasil2014\obj\Debug\Brasil2014.dll
 \\psf\Home\Documents\Projects\MundialBrasilQuiniela\Brasil2014\obj\Debug\Brasil2014.pdb
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\MundialBrasilQuiniela\Brasil2014\bin\Brasil2014.dll.config
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\MundialBrasilQuiniela\Brasil2014\bin\Brasil2014.dll
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\MundialBrasilQuiniela\Brasil2014\bin\Brasil2014.pdb
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\MundialBrasilQuiniela\Brasil2014\bin\Nancy.dll
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\MundialBrasilQuiniela\Brasil2014\bin\Nancy.Hosting.Aspnet.dll
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\MundialBrasilQuiniela\Brasil2014\bin\Nancy.ViewEngines.Razor.dll
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\MundialBrasilQuiniela\Brasil2014\bin\System.Web.Razor.dll
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\MundialBrasilQuiniela\Brasil2014\bin\Nancy.xml
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\MundialBrasilQuiniela\Brasil2014\bin\Nancy.Hosting.Aspnet.xml
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\MundialBrasilQuiniela\Brasil2014\bin\System.Web.Razor.xml
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\MundialBrasilQuiniela\Brasil2014\bin\Nancy.ViewEngines.Razor.xml
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\MundialBrasilQuiniela\Brasil2014\obj\Debug\Brasil2014.dll
+\\psf\Home\Documents\Projects\MundialBrasilQuiniela\MundialBrasilQuiniela\Brasil2014\obj\Debug\Brasil2014.pdb

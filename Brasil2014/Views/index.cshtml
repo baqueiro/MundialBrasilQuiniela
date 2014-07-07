@@ -33,7 +33,7 @@
                                 </div>
                             </div>
                                 </div>
-                            <div style="height: 60px;" data-bind="text: Result"></div>
+                            <div style="height: 60px;" data-bind="text: Prophecy"></div>
                         </div>
                     </div>
                 </div>
@@ -46,6 +46,7 @@
                             <tr>
                                 <th>Num</th>
                                 <th>Partido</th>
+                                <th>Predicho</th>
                                 <th>Resultado</th>
                             </tr>
                         </thead>
@@ -53,6 +54,7 @@
                             <tr>
                                 <td data-bind="text: NumGame"></td>
                                 <td data-bind="text: Team1_Name + ' vs ' + Team2_Name"></td>
+                                <td data-bind="text: Prophecy" class="text-center"></td>
                                 <td data-bind="text: Result" class="text-center"></td>
                             </tr>
                         </tbody>
@@ -95,7 +97,13 @@
             self.Team1_Img = data.team1.uriImg;
             self.Team2_Name = data.team2.name;
             self.Team2_Img = data.team2.uriImg;
-            self.Result = ko.observable(data.result); // , {persist: 'self.Result'}
+            self.Prophecy = ko.observable(data.prophecy); // , {persist: 'self.Result'}
+            self.Result = ko.observable(data.result);
+            if (self.Prophecy == self.Result) {
+                self.Acierto = true;
+            } else {
+                self.Acierto = false;
+            }
             self.Succes1 = ko.observable('');
             self.SuccesE = ko.observable();
             self.Succes2 = ko.observable();
@@ -121,12 +129,20 @@
         function MatchViewModel() {
             var self = this;
             self.Matches = ko.observableArray();
+
             $.getJSON("/api/Matches/", function (response) {
                 var mapped = $.map(response, function (repo) {
+
+
                     return new MatchModel(repo);
                 });
+
+
+
                 self.Matches(mapped);
             });
+
+            
         };
 
         ko.applyBindings(new MatchViewModel());
